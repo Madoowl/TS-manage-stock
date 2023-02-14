@@ -52,15 +52,11 @@ let title: HTMLElement | any = document.getElementById('title');
 title.textContent = "Hello World";
 
 let stock: HTMLElement | any = document.getElementById('stock');
-// myStock.articles.forEach((article: Article) =>
-// {
-//     const p = document.createElement('p');
-//     p.textContent = `title : ${article.title}$, content: ${article.content}`;
-//     stock.appendChild(p);
-// });
+let table = document.createElement('table');
 
-myStock.articles.forEach((article) => {
-    const articleElement = document.createElement('article');
+myStock.articles.forEach((article) =>
+{
+    const trArticle = document.createElement('tr');
     articleElement.innerHTML = 
         `<h2>${article.title}</h2><p>${article.content}</p>`
     ;
@@ -70,8 +66,4 @@ myStock.articles.forEach((article) => {
 // myStock.articles.map((article: Article) =>
 // {
 // });
-
-
-console.log(footerText);
-
 
