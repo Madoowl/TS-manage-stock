@@ -1,8 +1,8 @@
-export class Article
+export class Article 
 {
-    id: number;
-    title: string;
-    content: string;
+    id!: number;
+    title!: string;
+    content!: string;
     /**
      *
      */
@@ -11,9 +11,9 @@ export class Article
         this.title = title;
         this.content = content;
     }
-
     public toString(): string
     { 
         return `Article: ${this.id} - ${this.title} - ${this.content}`;
     }
+
 }
