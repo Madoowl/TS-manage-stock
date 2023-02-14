@@ -15,5 +15,4 @@ export class Article
     { 
         return `Article: ${this.id} - ${this.title} - ${this.content}`;
     }
-
 }
