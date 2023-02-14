@@ -12,5 +12,8 @@ export class Article
         this.content = content;
     }
 
-    
+    public toString(): string
+    { 
+        return `Article: ${this.id} - ${this.title} - ${this.content}`;
+    }
 }
