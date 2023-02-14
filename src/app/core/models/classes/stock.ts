@@ -7,7 +7,7 @@ export class Stock {
      *
      */
     constructor(articles: Article[]) {
-        this.articles = [];
+        this.articles = articles;
     }
     
     public toString(): string
