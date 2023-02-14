@@ -18,34 +18,11 @@ let footer = new Footer();
 let footerText = footer.getFooterText();
 
 //Create list of articles
-const articles: Article[] = [
-    {
-        id: 1,
-        title: 'Article 1',
-        content: 'Content 1',
-    },
-    {
-        id: 2,
-        title: 'Article 2',
-        content: 'Content 2',
-    },    
-    {
-        id: 3,
-        title: 'Article 3',
-        content: 'Content 3',
-    },    
-   
-    {
-        id: 4,
-        title: 'Article 4',
-        content: 'Content 4',
-    },    
-    {
-        id: 5,
-        title: 'Article 5',
-        content: 'Content 5',
-    }, 
-]
+let articles: Article[] = [];
+for (let index = 1; index <= 5; index++) {
+    articles.push(new Article(index, `Article ${index}`, `Content ${index}`));
+};
+
 export const myStock: Stock = new Stock(articles);
 
 let title: HTMLElement | any = document.getElementById('title');
@@ -55,9 +32,8 @@ let stock: HTMLElement | any = document.getElementById('stock');
 
 myStock.articles.forEach((article) =>
 {
-    debugger;
     const trArticle = document.createElement('tr');
-    trArticle.innerHTML = `<th>${article.id}</th><th>${article.title}</th><th>${article.content}</th><th>Actions à venir</th>`;
+    trArticle.innerHTML = `<th hidden>${article.id}</th><th>${article.title}</th><th>${article.content}</th><th>Actions à venir</th>`;
     stock.appendChild(trArticle);
     });
 
