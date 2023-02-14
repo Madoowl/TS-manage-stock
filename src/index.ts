@@ -52,15 +52,13 @@ let title: HTMLElement | any = document.getElementById('title');
 title.textContent = "Hello World";
 
 let stock: HTMLElement | any = document.getElementById('stock');
-let table = document.createElement('table');
 
 myStock.articles.forEach((article) =>
 {
+    debugger;
     const trArticle = document.createElement('tr');
-    articleElement.innerHTML = 
-        `<h2>${article.title}</h2><p>${article.content}</p>`
-    ;
-    document.body.appendChild(articleElement);
+    trArticle.innerHTML = `<th>${article.id}</th><th>${article.title}</th><th>${article.content}</th><th>Actions à venir</th>`;
+    stock.appendChild(trArticle);
     });
 
 // myStock.articles.map((article: Article) =>
