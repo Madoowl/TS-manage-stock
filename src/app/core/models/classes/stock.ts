@@ -14,4 +14,13 @@ export class Stock {
     { 
         return this.articles.toString();
     }
+    getArticleById(id: number): Article
+    {
+        return this.articles.filter(x => x.id === id)[0];
+    }
+
+    getArticleByTitle(title: string): Article[]
+    {
+        return this.articles.filter(x => x.title === title);
+    }
 }
